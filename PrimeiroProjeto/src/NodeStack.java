@@ -27,11 +27,21 @@ public class NodeStack implements IStack {
 
     @Override
     public void push(String element) {
-
+        Node no = new Node(element);
+        no.next = top;
+        top = no;
+        size++;
     }
 
     @Override
     public String pop() {
-        return "";
+        if(isEmpty()){
+            throw new RuntimeException("Pilha vazia");
+        }
+
+        String temp = top();
+        top = top.next;
+        size--;
+        return  temp;
     }
 }
