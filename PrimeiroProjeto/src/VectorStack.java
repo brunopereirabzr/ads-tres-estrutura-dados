@@ -16,7 +16,7 @@ public class VectorStack implements  IStack{
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == size();
     }
 
     @Override
@@ -26,7 +26,7 @@ public class VectorStack implements  IStack{
 
     @Override
     public void push(String element) {
-
+        
     }
 
     @Override
