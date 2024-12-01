@@ -25,8 +25,14 @@ public class Main {
         livro.adicionar(livro1);
         livro.adicionar(livro2);
         livro.adicionar(livro3);
+        livro.adicionar(livro1);
+        livro.adicionar(livro3);
+        //livro.removerNoFinal();
         livro.removerNoInicio();
-        livro.removerNoFinal();
+
+
+
+
 
         System.out.println(livro.toString());
 

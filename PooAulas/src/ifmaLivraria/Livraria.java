@@ -25,7 +25,7 @@ public class Livraria {
 
     public void adicionar(Livro livro){
         if (capacidade == size){
-            throw new RuntimeException("Vetor vazio");
+            throw new RuntimeException("Vetor cheio");
         }
 
         livros[size] = livro;
@@ -60,9 +60,10 @@ public class Livraria {
             throw new RuntimeException("Vetor vazio");
         }
         String temp = livros[0].getNome();
-        for (int i=0;i<size();i++){
-            if(i+1==size()){
+        for(int i = 0; i <size; i++){
+            if(i == size-1){
                 livros[i] = null;
+                break;
             }
             livros[i] = livros[i+1];
         }
