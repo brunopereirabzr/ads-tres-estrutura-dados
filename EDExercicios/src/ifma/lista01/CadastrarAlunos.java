@@ -79,4 +79,16 @@ public class CadastrarAlunos {
         }
         return s + "]";
     }
+
+    public  boolean verificarIndice(int indice){
+        if (isEmpty()){
+            throw new RuntimeException("Vetor vazio");
+        }
+        if(indice>=0 && indice < size){
+            if (alunos[indice] != null){
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -26,5 +26,6 @@ public class TestarAlunos {
 
         System.out.println(cadastro.toString());
         System.out.println("size: "+ cadastro.size());
+        System.out.println(cadastro.verificarIndice(-1));
     }
 }
