@@ -28,13 +28,14 @@ public class TestarAlunos {
         Aluno aluno1 = new Aluno(11,"024","Aluno1");
         cadastro.adicionarNoInicio(aluno1);
 
-        Aluno aluno2 = new Aluno(55,"024","Aluno2");
+        Aluno aluno2 = new Aluno(5,"024","Aluno2");
         cadastro.adicionarNoInicio(aluno2);
 
-        Aluno aluno3 = new Aluno(77,"024","Aluno3");
+        Aluno aluno3 = new Aluno(7,"024","Aluno3");
         cadastro.adicionarNoFinal(aluno3);
 
         String nome2 = cadastro.removerComIndice(3);
+        cadastro.ordenarVetor();
 
         System.out.println(cadastro.toString());
         System.out.println("size: "+ cadastro.size());

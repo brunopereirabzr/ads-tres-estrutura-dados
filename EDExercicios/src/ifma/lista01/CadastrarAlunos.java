@@ -130,6 +130,15 @@ public class CadastrarAlunos {
     }
 
     public void ordenarVetor(){
-        
+        Aluno aluno;
+        for (int i = 0; i < size;i++){
+            for(int j = 0;j<size;j++){
+                if(alunos[i].getCodigo()<alunos[j].getCodigo()){
+                    aluno = alunos[i];
+                    alunos[i] = alunos[j];
+                    alunos[j] = aluno;
+                }
+            }
+        }
     }
 }
