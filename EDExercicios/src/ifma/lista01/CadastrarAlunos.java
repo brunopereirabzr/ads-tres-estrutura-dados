@@ -91,4 +91,45 @@ public class CadastrarAlunos {
         }
         return false;
     }
+
+    public String removerComIndice(int indice){
+        String alunoIndice = "";
+        if (isEmpty()){
+            throw new RuntimeException("Vetor vazio!");
+        }
+        if(verificarIndice(indice) == false){
+            throw new RuntimeException("Indice não se enconta no vetor");
+        }
+        if (indice == 0){
+            String temp = alunos[indice].getNome();
+            removerNoInicio();
+            return temp;
+        }
+        if (indice==size-1){
+            String temp = alunos[indice].getNome();
+            removerNoFinal();
+            return temp;
+        }
+        for(int i=0;i<size;i++){
+            if(i==indice){
+                alunoIndice = alunos[i].getNome();
+                int j = i;
+                while (j<size){
+                    if (j==size-1){
+                        alunos[j] = null;
+                        break;
+                    }
+                    alunos[j] = alunos[j+1];
+                    j++;
+                }
+                size--;
+                break;
+            }
+        }
+        return alunoIndice;
+    }
+
+    public void ordenarVetor(){
+        
+    }
 }

@@ -22,10 +22,23 @@ public class TestarAlunos {
         cadastro.removerNoInicio();
         cadastro.removerNoFinal();
 
+        String nome = cadastro.removerComIndice(1);
 
+
+        Aluno aluno1 = new Aluno(11,"024","Aluno1");
+        cadastro.adicionarNoInicio(aluno1);
+
+        Aluno aluno2 = new Aluno(55,"024","Aluno2");
+        cadastro.adicionarNoInicio(aluno2);
+
+        Aluno aluno3 = new Aluno(77,"024","Aluno3");
+        cadastro.adicionarNoFinal(aluno3);
+
+        String nome2 = cadastro.removerComIndice(3);
 
         System.out.println(cadastro.toString());
         System.out.println("size: "+ cadastro.size());
         System.out.println(cadastro.verificarIndice(-1));
+        System.out.println(nome2);
     }
 }
