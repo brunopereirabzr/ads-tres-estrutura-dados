@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class VectorStack implements  IStack{
     int capacidade;
     String s[];
@@ -33,4 +35,19 @@ public class VectorStack implements  IStack{
     public String pop() {
         return "";
     }
+
+    @Override
+    public String toString() {
+        String s = "[";
+        if(size > 0){
+            for(int i = 0; i < size(); i++){
+                if(S[i] != top())
+                    s+= S[i] + ", ";
+                else
+                    s += S[i];
+            }
+        }
+        return s + "]";
+    }
+
 }
