@@ -27,6 +27,18 @@ public class Lista02 {
         q11();
         System.out.print("------ Q12 ------");
         System.out.println(q12());
+        System.out.println("------ Q13 ------");
+        q13();
+        System.out.println("------ Q14 ------");
+        q14();
+        System.out.println("------ Q15 ------");
+        q15();
+        System.out.println("------ Q16 ------");
+        q16();
+        System.out.println("------ Q17 ------");
+        q17();
+        System.out.println("------ Q18 ------");
+        q18();
     }
 
     public static void q01(){
@@ -213,5 +225,109 @@ public class Lista02 {
         }
         System.out.println();
         return produto;
-    }//fim q11
+    }//fim q12
+
+    public static void q13(){
+        int matriz[][] = {  {1,2,3}, // 00 01 02
+                            {4,5,6}, // 10 11 12
+                            {7,8,9}};// 20 21 22
+        int matrizB[][] = new int[3][3];
+
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; j < matriz.length; j++){
+                int mod = matriz[i][j]%2;
+                if(mod == 0){
+                    matrizB[i][j] = matriz[i][j] * matriz[i][j];
+                }else{
+                    matrizB[i][j] = matriz[i][j] * matriz[i][j] * matriz[i][j] ;;
+                }
+
+            }
+        }
+
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; j < matriz.length; j++){
+                System.out.print(matrizB[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }//fim q13
+
+    public static void q14(){
+        int matriz[][] = {  {1,2,3}, // 00 01 02 | 20 10 00
+                            {4,5,6}, // 10 11 12 | 21 11 01
+                            {7,8,9}};// 20 21 22 | 22 12 02
+
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 2; j >= 0; j--){
+                System.out.print(matriz[j][i] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }//fim q14
+
+    public static void q15(){
+        int matriz[][] = {  {1,2,3}, // 00 01 02 | 22 21 20
+                            {4,5,6}, // 10 11 12 | 12 11 10
+                            {7,8,9}};// 20 21 22 | 02 01 00
+
+        for(int i = 2; i >=0; i--){
+            for(int j = 2; j >= 0; j--){
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }//fim q15
+
+    public static void q16(){
+        int matriz[][] = {  {1,2,3}, // 00 01 02 | 02 12 22
+                            {4,5,6}, // 10 11 12 | 01 11 21
+                            {7,8,9}};// 20 21 22 | 00 10 20
+
+        for(int i = 2; i >= 0; i--){
+            for(int j = 0; j < matriz.length; j++){
+                System.out.print(matriz[j][i] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }//fim q16
+
+    public static void q17(){
+        int matriz[][] = {  {1,2,3}, // 00 01 02 |
+                            {4,5,6}, // 10 11 12 |
+                            {7,8,9}};// 20 21 22 |
+
+        for(int i = 0; i < matriz.length; i++){
+            System.out.print(matriz[i][0] + " ");
+            for(int j = 2; j < matriz.length; j++){
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }//fim q17
+
+    public static void q18(){
+        int[][] matriz = {  {1, 3, 5},
+                            {2, 4, 6}};
+
+        int[][] transposta = new int[3][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                transposta[j][i] = matriz[i][j];
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(transposta[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }//fim q18
 }
+
